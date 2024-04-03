@@ -1,0 +1,128 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+
+body {
+    background-color: #212121;
+}
+
+
+
+::-webkit-scrollbar {
+    width: 5px;
+}
+
+
+::-webkit-scrollbar-track {
+    background: wheat;
+    border-radius: 20px;
+}
+
+
+::-webkit-scrollbar-thumb {
+    background: rgb(255, 166, 0);
+}
+
+
+::-webkit-scrollbar-thumb:hover {
+    background: #000000;
+}
+
+
+
+main {
+    min-height: 100dvh;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+.note {
+    margin-top: 40px;
+    height: 40dvh;
+    width: auto;
+    transition: all .22s ease-in-out;
+}
+
+.note:hover{
+    scale: 1.03;
+}
+
+.toolbar {
+    background-color: rgb(255, 166, 0);
+    text-align: end;
+    align-items: center;
+    /* display: flex; */
+    padding: 5px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+
+.toolbar i {
+    position: sticky;
+    padding: 5px;
+    font-size: 25px;
+    cursor: pointer;
+    transition: all .2s ease-in-out;
+}
+
+.toolbar i:hover {
+    color: white;
+}
+
+.note .text {
+    border: none;
+    height: 100%;
+    font-size: x-large;
+    font-weight: 600;
+    padding: 10px;
+    width: 100%;
+    resize: none;
+    background-color: wheat;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+.note textarea:focus {
+    outline: none;
+}
+
+#btn {
+    background-color: wheat;
+    border: none;
+    font-size: larger;
+    font-weight: 700;
+    padding: 10px;
+    border-radius: 10px;
+    position: sticky;
+    left: 5%;
+    top: 2%;
+    cursor: pointer;
+    transition: all .3s ease-in-out;
+}
+
+#btn:hover {
+    background-color: rgb(255, 166, 0);
+    scale: 1.03;
+}
+
+@media (max-width:600px) {
+    #btn {
+        left: 80%;
+        top: 90%;
+        font-size: x-small;
+        background-color: rgb(255, 166, 0);
+    }
+
+    .plus{
+        font-size: 30px;
+    }
+    #span{
+        display: none;
+    }
+}
