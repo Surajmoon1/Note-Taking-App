@@ -3,8 +3,11 @@ const button = document.querySelector("#btn");
 const saveNotes = () => {
   const notes = document.querySelectorAll(".text");
   let data = [];
-  notes.forEach((note) => {
-    data.push(note.value);
+    notes.forEach((note) => {
+      if (note.value !== '') {
+        
+          data.push(note.value);
+      }
   });
   //   console.log(data);
 
